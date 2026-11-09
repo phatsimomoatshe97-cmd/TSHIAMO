@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Threads Clothing Co. — modern essentials for everyday.">
+  <title>Essential Hoodie | Threads Clothing Co.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span>‹</span> FREE SHIPPING ON ORDERS OVER P800 <span>›</span></div>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Threads home"><span class="logo-mark">♧</span><span class="logo-text">THREADS<small>CLOTHING CO.</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">☰</button>
+    <nav class="main-nav">
+      <a href="index.html" >Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="new-in.html" >New In</a>
+      <a href="collections.html" >Collections</a>
+      <a href="about.html" >About Us</a>
+      <a href="contact.html" >Contact</a>
+    </nav>
+    <div class="header-icons"><button aria-label="Search" onclick="document.getElementById('search-panel').classList.toggle('show')">⌕</button><a href="contact.html" aria-label="Account">♙</a><a href="shop.html" aria-label="Shopping bag">♧<b id="cart-count">0</b></a></div>
+  </header>
+  <div class="search-panel" id="search-panel"><input id="search-input" placeholder="Search clothing..." oninput="filterProducts(this.value)"><a href="shop.html">Browse all products →</a></div>
+  <main>
+<section class="page-banner shop-banner"><div><h1>PRODUCT DETAILS</h1><p><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Essential Hoodie</p></div></section><section class="product-detail"><div class="detail-image"><img src="assets/product-1.jpg" alt="Essential Hoodie"></div><div class="detail-info"><span class="eyebrow">THREADS ESSENTIALS</span><h1>Essential Hoodie</h1><p class="detail-price">P499.00</p><p>A comfortable everyday layer with a relaxed fit and clean, minimal styling. Easy to pair with your favourite denim, joggers or cargos.</p><div class="detail-options"><b>Colour</b><div class="color-dots"><i></i><i></i><i></i></div><b>Size</b><div class="sizes"><button>XS</button><button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button></div></div><button class="btn dark" onclick="addToCart()">ADD TO BAG</button><p class="shipping-note">✓ Secure checkout &nbsp; ✓ Easy 30-day returns</p><details open><summary>Product details</summary><p>Soft-feel fabric, everyday silhouette, designed for easy layering.</p></details><details><summary>Shipping & returns</summary><p>Free delivery on orders over P800. Eligible items can be returned within 30 days.</p></details></div></section><section class="section-wrap"><div class="section-heading"><h2>YOU MAY ALSO LIKE</h2><a href="shop.html">VIEW ALL →</a></div><div class="product-grid"><article class="product-card" data-name="ribbed crop top"><div class="product-image"><a href="product.html"><img src="assets/product-2.jpg" alt="Ribbed Crop Top"></a><span class="badge">NEW</span><button class="heart" aria-label="Add Ribbed Crop Top to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Ribbed Crop Top</h3><p class="price">P299.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="classic oversize tee"><div class="product-image"><a href="product.html"><img src="assets/product-3.jpg" alt="Classic Oversize Tee"></a><button class="heart" aria-label="Add Classic Oversize Tee to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Classic Oversize Tee</h3><p class="price">P349.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="cargo pants"><div class="product-image"><a href="product.html"><img src="assets/product-4.jpg" alt="Cargo Pants"></a><span class="badge">NEW</span><button class="heart" aria-label="Add Cargo Pants to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Cargo Pants</h3><p class="price">P599.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="varsity jacket"><div class="product-image"><a href="product.html"><img src="assets/product-5.jpg" alt="Varsity Jacket"></a><button class="heart" aria-label="Add Varsity Jacket to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Varsity Jacket</h3><p class="price">P899.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article></div></section>
+  </main>
+  <section class="newsletter">
+    <div><strong>✉ &nbsp; STAY IN THE LOOP</strong><p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p></div>
+    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');"><input type="email" placeholder="Enter your email" required><button class="btn dark">SUBSCRIBE</button></form>
+    <div class="social"><strong>FOLLOW US</strong><p>◎ &nbsp; f &nbsp; ♪ &nbsp; ▶</p></div>
+  </section>
+  <section class="benefits">
+    <div><span>♧</span><p><b>FREE DELIVERY</b><small>On orders over P800</small></p></div>
+    <div><span>⟳</span><p><b>EASY RETURNS</b><small>30-day return policy</small></p></div>
+    <div><span>♙</span><p><b>SECURE PAYMENT</b><small>100% secure checkout</small></p></div>
+    <div><span>☏</span><p><b>CUSTOMER SUPPORT</b><small>We're here to help</small></p></div>
+  </section>
+  <footer class="footer">
+    <div class="footer-brand"><a class="logo" href="index.html"><span class="logo-text">THREADS<small>CLOTHING CO.</small></span></a><p>Modern essentials for every day.<br>Designed for comfort. Made to last.</p></div>
+    <div><b>SHOP</b><a href="shop.html">All Products</a><a href="shop.html#men">Men</a><a href="shop.html#women">Women</a><a href="shop.html#kids">Kids</a><a href="shop.html#accessories">Accessories</a></div>
+    <div><b>HELP</b><a href="contact.html">FAQ</a><a href="contact.html">Shipping & Delivery</a><a href="contact.html">Returns</a><a href="contact.html">Size Guide</a><a href="contact.html">Contact Us</a></div>
+    <div><b>COMPANY</b><a href="about.html">About Us</a><a href="about.html">Our Story</a><a href="about.html">Sustainability</a><a href="about.html">Careers</a><a href="new-in.html">Journal</a></div>
+    <div class="copyright">© 2024 Threads Clothing Co.<br>All rights reserved.<p>Privacy Policy &nbsp; | &nbsp; Terms & Conditions</p></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

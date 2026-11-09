@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Threads Clothing Co. — modern essentials for everyday.">
+  <title>Shop | Threads Clothing Co.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement"><span>‹</span> FREE SHIPPING ON ORDERS OVER P800 <span>›</span></div>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Threads home"><span class="logo-mark">♧</span><span class="logo-text">THREADS<small>CLOTHING CO.</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.body.classList.toggle('nav-open')">☰</button>
+    <nav class="main-nav">
+      <a href="index.html" >Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="new-in.html" >New In</a>
+      <a href="collections.html" >Collections</a>
+      <a href="about.html" >About Us</a>
+      <a href="contact.html" >Contact</a>
+    </nav>
+    <div class="header-icons"><button aria-label="Search" onclick="document.getElementById('search-panel').classList.toggle('show')">⌕</button><a href="contact.html" aria-label="Account">♙</a><a href="shop.html" aria-label="Shopping bag">♧<b id="cart-count">0</b></a></div>
+  </header>
+  <div class="search-panel" id="search-panel"><input id="search-input" placeholder="Search clothing..." oninput="filterProducts(this.value)"><a href="shop.html">Browse all products →</a></div>
+  <main>
+
+<section class="page-banner shop-banner"><div><h1>SHOP</h1><p><a href="index.html">Home</a> / Shop</p></div></section>
+<div class="shop-layout"><aside class="filters"><div class="filter-title"><b>FILTERS</b><button onclick="clearFilters()">Clear All</button></div><h4>CATEGORIES</h4><a href="#all">All</a><a id="men" href="#men">Men</a><a id="women" href="#women">Women</a><a href="#kids">Kids</a><a id="accessories" href="#accessories">Accessories</a><hr><h4>PRICE</h4><div class="price-range"><span>P0</span><span>P1000+</span></div><input type="range" min="0" max="1000" value="1000"><hr><h4>SIZE</h4><div class="sizes"><button>XS</button><button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button></div><hr><h4>COLOR</h4><div class="color-dots"><i></i><i></i><i></i><i></i><i></i><i></i></div><hr><h4>SORT BY</h4><select><option>Newest First</option><option>Price: low to high</option><option>Price: high to low</option></select></aside>
+<section class="shop-products"><div class="shop-top"><span>Showing 1–12 of 48 results</span><select><option>Newest First</option><option>Price: low to high</option><option>Price: high to low</option></select></div><div class="product-grid shop-grid"><article class="product-card" data-name="essential hoodie"><div class="product-image"><a href="product.html"><img src="assets/product-1.jpg" alt="Essential Hoodie"></a><span class="badge">NEW</span><button class="heart" aria-label="Add Essential Hoodie to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Essential Hoodie</h3><p class="price">P499.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="ribbed crop top"><div class="product-image"><a href="product.html"><img src="assets/product-2.jpg" alt="Ribbed Crop Top"></a><span class="badge">NEW</span><button class="heart" aria-label="Add Ribbed Crop Top to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Ribbed Crop Top</h3><p class="price">P299.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="classic oversize tee"><div class="product-image"><a href="product.html"><img src="assets/product-3.jpg" alt="Classic Oversize Tee"></a><button class="heart" aria-label="Add Classic Oversize Tee to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Classic Oversize Tee</h3><p class="price">P349.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="cargo pants"><div class="product-image"><a href="product.html"><img src="assets/product-4.jpg" alt="Cargo Pants"></a><span class="badge">NEW</span><button class="heart" aria-label="Add Cargo Pants to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Cargo Pants</h3><p class="price">P599.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="varsity jacket"><div class="product-image"><a href="product.html"><img src="assets/product-5.jpg" alt="Varsity Jacket"></a><button class="heart" aria-label="Add Varsity Jacket to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Varsity Jacket</h3><p class="price">P899.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="zip hoodie"><div class="product-image"><a href="product.html"><img src="assets/product-6.jpg" alt="Zip Hoodie"></a><button class="heart" aria-label="Add Zip Hoodie to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Zip Hoodie</h3><p class="price">P549.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="classic cap"><div class="product-image"><a href="product.html"><img src="assets/product-7.jpg" alt="Classic Cap"></a><button class="heart" aria-label="Add Classic Cap to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Classic Cap</h3><p class="price">P199.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="minimal sneakers"><div class="product-image"><a href="product.html"><img src="assets/product-8.jpg" alt="Minimal Sneakers"></a><button class="heart" aria-label="Add Minimal Sneakers to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Minimal Sneakers</h3><p class="price">P799.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="basic hoodie"><div class="product-image"><a href="product.html"><img src="assets/product-9.jpg" alt="Basic Hoodie"></a><button class="heart" aria-label="Add Basic Hoodie to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Basic Hoodie</h3><p class="price">P459.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="jogger pants"><div class="product-image"><a href="product.html"><img src="assets/product-10.jpg" alt="Jogger Pants"></a><button class="heart" aria-label="Add Jogger Pants to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Jogger Pants</h3><p class="price">P499.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="ribbed tank top"><div class="product-image"><a href="product.html"><img src="assets/product-11.jpg" alt="Ribbed Tank Top"></a><button class="heart" aria-label="Add Ribbed Tank Top to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Ribbed Tank Top</h3><p class="price">P249.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article><article class="product-card" data-name="canvas tote bag"><div class="product-image"><a href="product.html"><img src="assets/product-12.jpg" alt="Canvas Tote Bag"></a><button class="heart" aria-label="Add Canvas Tote Bag to wishlist" onclick="this.classList.toggle('liked')">♡</button></div><h3>Canvas Tote Bag</h3><p class="price">P299.00</p><div class="swatches"><i></i><i></i><i></i></div><button class="add-cart" onclick="addToCart()">ADD TO BAG +</button></article></div><div class="pagination"><button class="current">1</button><button>2</button><button>3</button><button>4</button><button>›</button></div></section></div>
+
+  </main>
+  <section class="newsletter">
+    <div><strong>✉ &nbsp; STAY IN THE LOOP</strong><p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p></div>
+    <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');"><input type="email" placeholder="Enter your email" required><button class="btn dark">SUBSCRIBE</button></form>
+    <div class="social"><strong>FOLLOW US</strong><p>◎ &nbsp; f &nbsp; ♪ &nbsp; ▶</p></div>
+  </section>
+  <section class="benefits">
+    <div><span>♧</span><p><b>FREE DELIVERY</b><small>On orders over P800</small></p></div>
+    <div><span>⟳</span><p><b>EASY RETURNS</b><small>30-day return policy</small></p></div>
+    <div><span>♙</span><p><b>SECURE PAYMENT</b><small>100% secure checkout</small></p></div>
+    <div><span>☏</span><p><b>CUSTOMER SUPPORT</b><small>We're here to help</small></p></div>
+  </section>
+  <footer class="footer">
+    <div class="footer-brand"><a class="logo" href="index.html"><span class="logo-text">THREADS<small>CLOTHING CO.</small></span></a><p>Modern essentials for every day.<br>Designed for comfort. Made to last.</p></div>
+    <div><b>SHOP</b><a href="shop.html">All Products</a><a href="shop.html#men">Men</a><a href="shop.html#women">Women</a><a href="shop.html#kids">Kids</a><a href="shop.html#accessories">Accessories</a></div>
+    <div><b>HELP</b><a href="contact.html">FAQ</a><a href="contact.html">Shipping & Delivery</a><a href="contact.html">Returns</a><a href="contact.html">Size Guide</a><a href="contact.html">Contact Us</a></div>
+    <div><b>COMPANY</b><a href="about.html">About Us</a><a href="about.html">Our Story</a><a href="about.html">Sustainability</a><a href="about.html">Careers</a><a href="new-in.html">Journal</a></div>
+    <div class="copyright">© 2024 Threads Clothing Co.<br>All rights reserved.<p>Privacy Policy &nbsp; | &nbsp; Terms & Conditions</p></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
